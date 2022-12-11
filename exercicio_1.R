@@ -5,7 +5,7 @@ if (!("readxl") %in% installed.packages()) install.packages("readxl")
 library(readxl)
 
 # Importando o arquivo do exercício 1
-df.ex1 <- read_excel("./dados/exercicio1.xls",skip = 1, col_names = "tx.juros", col_types = c("numeric"))
+df.ex1 <- read_excel("./my project/nilton-ferst/dados/exercicio1.xls",skip = 1, col_names = "tx.juros", col_types = c("numeric"))
 
 # calculando a media
 ex1.media <- mean(df.ex1$tx.juros)
@@ -16,7 +16,7 @@ ex1.mediana = median(df.ex1$tx.juros)
 print(paste("Médiana das taxas de juros:", ex1.mediana))
 
 # calculando o desvio padrão
-ex1_desviop = round(sd(df.ex1$tx.juros),6)
+ex1_desviop  <- round(sd(df.ex1$tx.juros),6)
 print(paste("Desvio Padrão das taxas de juros:", ex1_desviop))
 
 # calculando a variância
@@ -29,7 +29,7 @@ print(paste("Valor mínimo das taxas de juros:", ex1.minimo))
 
 # valor máximo
 ex1.maximo <- max(df.ex1$tx.juros)
-print(paste("Valor máximo das taxas de juros:", ex1.maximo))
+print(paste("Valor máximo das taxas de juros:", ex3.maximo))
 
 # calculando os quartis
 ex1.quartis <- round(quantile(df.ex1$tx.juros),2)
